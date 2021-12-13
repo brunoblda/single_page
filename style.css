@@ -104,3 +104,7 @@
 .ancoraDeputados button:hover{
     background-color: #444b81;
 }
+
+.deputadosCards img {
+    background-color: #444b81;
+}

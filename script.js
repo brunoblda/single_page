@@ -25,25 +25,24 @@ function PesquisarDeputado() {
 
 }
 
-function printCardsDeputados() {
+window.onload = function printCardsDeputados() {
     let deputadosInfo = []
 
-    let respostaAllDeputados = allDeputadosApi
-    let respostaAllDeputadosJson = JSON.parse(respostaAllDeputados)
+    let respostaAllDeputadosJson = JSON.parse(allDeputadosApi)
 
-    deputadosCards = document.getElementById("deputadosCards")
-    deputadosCards.innerHTML = ''
+    let deputadosCards = document.getElementById("deputadosCards")
 
     for (let i = 0; i < 8; i++) {
         deputadosCards.innerHTML += `
         <div>
             <div>
-                <img src="${respostaAllDeputadosJson["dados"][0]["urlFoto"]}" 
+                <img src="${respostaAllDeputadosJson["dados"][i]["urlFoto"]}" 
             </div>
             <div>
-                <p>${respostaAllDeputadosJson["dados"][0]["nome"]} 
-                ${respostaAllDeputadosJson["dados"][0]["siglaPartido"]}-
-                ${respostaAllDeputadosJson["dados"][0]["siglaUf"]} </p>
+                <p>${respostaAllDeputadosJson["dados"][i]["nome"]}
+                <br> 
+                ${respostaAllDeputadosJson["dados"][i]["siglaPartido"]}-
+                ${respostaAllDeputadosJson["dados"][i]["siglaUf"]} </p>
             </div>
         </div>
         `
