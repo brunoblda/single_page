@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <!--font-family: 'Lora', serif;-->
+    <title>Dados Abertos</title>
+
+</head>
+
+<body>
+    <header class="headerP">
+        <div class="logo_textoLogo">
+            <div class="logo">
+                <img src="/images/logo.png" alt="Logo da camara dos deputados">
+            </div>
+            <div class="texto_logo" id="topoPagina">
+                <p>
+                    <a href="#topoPagina">dados aberto</a>
+                </p>
+            </div>
+
+        </div>
+        <nav class="navegacao">
+            <div>
+                <p>
+                    <a href="#topoPagina">INICIO</a>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <a href="#topoPagina">DEPUTADOS</a>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <a href="#topoPagina">PARTIDOS</a>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <a href="#topoPagina">NOTÍCIAS</a>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <a href="#topoPagina">EVENTOS</a>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <a href="#topoPagina">CONTATO</a>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <a href="#topoPagina">ASSESSMENT</a>
+                </p>
+            </div>
+        </nav>
+        <section class="ancoraDeputados">
+            <div>
+                <p class="p1_ancoraDeputados">QUEM SÃO OS DEPUTADOS</p>
+            </div>
+            <div>
+                <p class="p2_ancoraDeputados">Conheça os deputados, seus partidos e legislaturas.</p>
+            </div>
+            <div>
+                <button onclick="location.href='#topoPagina'" type="button">DEPUTADOS</button>
+            </div>
+
+
+        </section>
+
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <p>Deputados</p>
+            </div>
+            <div>
+                <p>Consulte aqui os deputados da Legistlatura atual:</p>
+            </div>
+            <div>
+                <input type="text" id="deputadoNome" placeholder="Nome do Deputado">
+                <button onclick="PesquisarDeputado()">Pesquisar</button> 
+            </div>
+            <section id=deputadosCards>
+            </section>
+        </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
