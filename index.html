@@ -84,17 +84,37 @@
 
     <main>
         <section>
-            <div>
-                <p>Deputados</p>
-            </div>
-            <div>
-                <p>Consulte aqui os deputados da Legistlatura atual:</p>
-            </div>
-            <div>
-                <input type="text" id="deputadoNome" placeholder="Nome do Deputado">
-                <button onclick="PesquisarDeputado()">Pesquisar</button>
-            </div>
+            <section class="pesquisaDeputados">
+                <div>
+                    <p>Deputados</p>
+                </div>
+                <div>
+                    <p>Consulte aqui os deputados da Legistlatura atual:</p>
+                </div>
+                <div>
+                    <input type="text" id="deputadoNome" placeholder="Nome do Deputado">
+                    <br>
+                    <br>
+                    <button onclick="PesquisarDeputado()">BUSCAR</button>
+                </div>
+            </section>
             <section id=deputadosCards class="deputadosCards">
+            </section>
+            <section class="pesquisaPartidos">
+                <div>
+                    <p>Partidos</p>
+                </div>
+                <div>
+                    <p>Consulte aqui os Partidos existentes:</p>
+                </div>
+                <div>
+                    <input type="text" id="deputadoNome" placeholder="Nome do Partido">
+                    <br>
+                    <br>
+                    <button onclick="PesquisarPartido()">BUSCAR</button>
+                </div>
+            </section>
+            <section id=partidosCards class="partidosCards">
             </section>
         </section>
 

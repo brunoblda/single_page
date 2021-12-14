@@ -101,10 +101,111 @@
     cursor: pointer;
 }
 
-.ancoraDeputados button:hover{
+.ancoraDeputados button:hover {
     background-color: #444b81;
 }
 
+.deputadosCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .deputadosCards img {
-    background-color: #444b81;
+    display: block;
+    width: 150px;
+}
+
+.deputadosCards hr {
+    width: 100%;
+    visibility: hidden;
+}
+
+.deputadosCards p {
+    text-align: center;
+}
+
+.textCard {
+    border: 1px solid rgba(141, 139, 139, 0.3);
+    padding-bottom: 15px;
+    padding-top: 15px;
+
+    word-wrap: break-word;
+}
+
+
+.divCard {
+    padding: 30px;
+    width: 150px;
+}
+
+.pesquisaDeputados {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.pesquisaDeputados div {
+    padding: 20px;
+}
+
+.pesquisaDeputados input[type=text] {
+
+    width: 400px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+
+}
+
+.pesquisaDeputados button {
+    background-color: #141941;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 16px 180px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.pesquisaPartidos {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.pesquisaPartidos div {
+    padding: 20px;
+}
+
+.pesquisaPartidos input[type=text] {
+
+    width: 400px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+
+}
+
+.pesquisaPartidos button {
+    background-color: #141941;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 16px 180px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
