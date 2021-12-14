@@ -118,10 +118,7 @@
     height: 200px;
     text-align: center;
     line-height: 180px;
-
-
 }
-
 
 .deputadosCards hr {
     width: 100%;
@@ -192,6 +189,10 @@
     cursor: pointer;
 }
 
+.pesquisaDeputados button:hover{
+    background-color: #444b81;
+}
+
 .pesquisaPartidos {
     text-align: center;
     padding-top: 60px;
@@ -226,6 +227,10 @@
     cursor: pointer;
 }
 
+.pesquisaPartidos button:hover{
+
+    background-color: #444b81;
+}
 
 .partidosCards {
     display: flex;
@@ -249,4 +254,76 @@
 
 .partidosCards p {
     text-align: center;
+}
+
+.noticiasP{
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.noticias {
+    padding-top: 60px;
+}
+
+.noticiasConteudo {
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+}
+
+.noticiasConteudo img{
+    width: 500px;
+    padding-right: 50px;
+}
+
+.flexNoticias {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.noticiasText{
+    display: flex;
+    flex-direction: column;
+}
+
+.noticiasTextConteudo {
+    height: 300px;
+}
+
+.noticiasTextConteudo h1{
+    font-size: 22px;
+    font-weight: bold;
+    
+}
+
+.noticiasText button {
+    background-color: #141941;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 16px 200px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.noticiasText button:hover {
+    background-color: #444b81;
+}
+
+.noticiasTextFonte {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.pesquisaEventos {
+    margin-top: 180px;
+}
+.eventosP{
+    text-align: center;
+    padding-bottom: 30px;
 }
