@@ -37,12 +37,12 @@
             </div>
             <div>
                 <p>
-                    <a href="#topoPagina">DEPUTADOS</a>
+                    <a href="#deputados">DEPUTADOS</a>
                 </p>
             </div>
             <div>
                 <p>
-                    <a href="#topoPagina">PARTIDOS</a>
+                    <a href="#partidos">PARTIDOS</a>
                 </p>
             </div>
             <div>
@@ -74,7 +74,7 @@
                 <p class="p2_ancoraDeputados">Conheça os deputados, seus partidos e legislaturas.</p>
             </div>
             <div>
-                <button onclick="location.href='#topoPagina'" type="button">DEPUTADOS</button>
+                <button onclick="location.href='#deputados'" type="button">DEPUTADOS</button>
             </div>
 
 
@@ -84,7 +84,7 @@
 
     <main>
         <section>
-            <section class="pesquisaDeputados">
+            <section class="pesquisaDeputados" id="deputados">
                 <div>
                     <p>Deputados</p>
                 </div>
@@ -100,7 +100,7 @@
             </section>
             <section id=deputadosCards class="deputadosCards">
             </section>
-            <section class="pesquisaPartidos">
+            <section class="pesquisaPartidos" id="partidos">
                 <div>
                     <p>Partidos</p>
                 </div>
@@ -108,13 +108,13 @@
                     <p>Consulte aqui os Partidos existentes:</p>
                 </div>
                 <div>
-                    <input type="text" id="deputadoNome" placeholder="Nome do Partido">
+                    <input type="text" id="partidoSigla" placeholder="Sigla do Partido">
                     <br>
                     <br>
                     <button onclick="PesquisarPartido()">BUSCAR</button>
                 </div>
             </section>
-            <section id=partidosCards class="partidosCards">
+            <section id="partidosCards" class="partidosCards">
             </section>
         </section>
 

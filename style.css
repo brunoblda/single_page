@@ -33,11 +33,11 @@
 .headerP {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url(/images/camara4-1-868x644.jpg);
-    width: 1100px;
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 575px;
+    height: 650px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -115,7 +115,13 @@
 .deputadosCards img {
     display: block;
     width: 150px;
+    height: 200px;
+    text-align: center;
+    line-height: 180px;
+
+
 }
+
 
 .deputadosCards hr {
     width: 100%;
@@ -134,9 +140,20 @@
     word-wrap: break-word;
 }
 
+.textCardP {
+    padding-bottom: 15px;
+    padding-top: 25px;
+
+    word-wrap: break-word;
+}
 
 .divCard {
     padding: 30px;
+    width: 150px;
+}
+
+.divCardP {
+    padding: 40px;
     width: 150px;
 }
 
@@ -193,7 +210,6 @@
     border-radius: 4px;
     box-sizing: border-box;
 
-
 }
 
 .pesquisaPartidos button {
@@ -208,4 +224,29 @@
     font-size: 10px;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+
+.partidosCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.partidosCards img {
+    display: block;
+    width: 150px;
+    height: 123.683px;
+    text-align: center;
+    line-height: 180px;
+}
+
+.partidosCards hr {
+    width: 100%;
+    visibility: hidden;
+}
+
+.partidosCards p {
+    text-align: center;
 }

@@ -1,4 +1,5 @@
 let allDeputadosApi = pesquisarTodosDeputados()
+let allPartidosApi = pesquisarTodosPartidos()
 
 function PesquisarDeputado() {
 
@@ -19,15 +20,10 @@ function PesquisarDeputado() {
     }
 
     respostaJson = []
-
-
     let respostaAllDeputadosJson = JSON.parse(allDeputadosApi)
-
-
     let deputadosEscolhidos = escolherDeputadosPesquisaOuTodos(respostaJsonNotEmpty["dados"], respostaAllDeputadosJson["dados"])
 
     printCardsDeputados(deputadosEscolhidos)
-
 }
 
 function escolherDeputadosPesquisaOuTodos(deputadosPesquisa = [], deputadosTodos) {
@@ -45,12 +41,8 @@ function escolherDeputadosPesquisaOuTodos(deputadosPesquisa = [], deputadosTodos
             } else {
                 deputadosEscolhidos.push(deputadosTodos[indexAleatorio[i]]);
             }
-
         }
-
     }
-
-
     return deputadosEscolhidos;
 }
 
@@ -76,24 +68,23 @@ function calcularArrayDeNumerosAleatoriosNaoRepetidos(qtde, numMin, numMax) {
     return listaNum
 }
 
-window.onload = function (){
+window.onload = function () {
     printCardsDeputados()
+    printCardsPartidos()
 }
 
 function printCardsDeputados(deputadosSelecionados = []) {
 
-    let deputadosPrint 
-    let respostaAllDeputadosJson 
+    let deputadosPrint
+    let respostaAllDeputadosJson
 
 
     if (deputadosSelecionados.length == 0) {
         respostaAllDeputadosJson = JSON.parse(allDeputadosApi)
         deputadosPrint = escolherDeputadosPesquisaOuTodos([], respostaAllDeputadosJson["dados"])
-    }else{
+    } else {
         deputadosPrint = deputadosSelecionados
     }
-
-
 
     let deputadosCards = document.getElementById("deputadosCards")
 
@@ -118,19 +109,149 @@ function printCardsDeputados(deputadosSelecionados = []) {
             `
         }
     }
-
 }
 
 function pesquisarTodosDeputados() {
 
     let url_base_all = "https://dadosabertos.camara.leg.br/api/v2/deputados"
-
     allHttp = new XMLHttpRequest();
-
     allHttp.open("GET", url_base_all, false)
-
     allHttp.send();
-
     return allHttp.response;
 
+}
+
+function pesquisarTodosPartidos() {
+
+    let url_base_all = "https://dadosabertos.camara.leg.br/api/v2/partidos?pagina=1&itens=100"
+    allHttp = new XMLHttpRequest();
+    allHttp.open("GET", url_base_all, false)
+    allHttp.send();
+    return allHttp.response;
+
+}
+
+function pegarPartidos(partidosSelecionados) {
+
+    let url_base = "https://dadosabertos.camara.leg.br/api/v2/partidos/"
+
+    let respostaJsonNotEmpty = []
+
+    let partidosId = [] 
+
+    partidosSelecionados.forEach(function(partido) {
+       partidosId.push(partido["id"]) 
+    });
+
+    for (let i = 0; i < 4; i++) {
+
+        let url_full = url_base + partidosId[i]
+
+        let xhttp = new XMLHttpRequest();
+        xhttp.open("GET", url_full, false);
+        xhttp.send();
+
+        let resposta = xhttp.response
+
+        let respostaJson = JSON.parse(resposta)
+
+        if (respostaJson["dados"] != 0) {
+            respostaJsonNotEmpty.push(respostaJson)
+        }
+
+    }
+
+
+    return respostaJsonNotEmpty 
+
+}
+
+
+function printCardsPartidos(partidosSelecionados = []) {
+
+    let partidosPrint
+    let respostaAllPartidosJson
+
+    if (partidosSelecionados.length == 0) {
+        respostaAllPartidosJson = JSON.parse(allPartidosApi)
+        console.log(respostaAllPartidosJson["dados"])
+        partidosPrint = escolherPartidosPesquisaOuTodos([], respostaAllPartidosJson["dados"])
+    } else {
+        partidosPrint = partidosSelecionados
+    }
+
+    let partidosFinal = pegarPartidos(partidosPrint)
+
+    console.log(partidosFinal)
+
+    console.log(partidosFinal[0]["dados"])
+
+    console.log(partidosFinal[0]["dados"]["urlLogo"])
+
+    let partidosCards = document.getElementById("partidosCards")
+
+    partidosCards.innerHTML = ""
+
+    for (let i = 0; i < 4; i++) {
+        partidosCards.innerHTML += `
+        <div class="divCardP">
+            <div>
+                <img src="${partidosFinal[i]["dados"]["urlLogo"]}" alt="Foto"> 
+            </div>
+            <div class="textCardP">
+                <p>${partidosPrint[i]["nome"]}</p>
+                 
+                <p>(${partidosPrint[i]["sigla"]})</p>
+            </div>
+        </div>
+        `
+    }
+}
+
+
+function escolherPartidosPesquisaOuTodos(partidosPesquisa = [], partidosTodos) {
+
+    qtdePartidos = partidosTodos.length
+    let indexAleatorio = calcularArrayDeNumerosAleatoriosNaoRepetidos(4, 0, qtdePartidos - 1);
+    let partidosEscolhidos = [];
+    if (partidosPesquisa.length == 0) {
+        for (let i = 0; i < 4; i++) {
+            partidosEscolhidos.push(partidosTodos[indexAleatorio[i]]);
+        }
+    } else {
+        for (let i = 0; i < 4; i++) {
+            if (i < partidosPesquisa.length) {
+                partidosEscolhidos.push(partidosPesquisa[i]);
+            } else {
+                partidosEscolhidos.push(partidosTodos[indexAleatorio[i]]);
+            }
+        }
+    }
+    return partidosEscolhidos;
+}
+
+
+function PesquisarPartido() {
+
+    let url_base = "https://dadosabertos.camara.leg.br/api/v2/partidos?sigla="
+    let partidoSiglaPesquisar = document.getElementById('partidoSigla').value;
+    let url_full = url_base + partidoSiglaPesquisar
+
+    let xhttp = new XMLHttpRequest();
+    xhttp.open("GET", url_full, false);
+    xhttp.send();
+
+    let respostaJsonNotEmpty = []
+
+    let resposta = xhttp.response
+    let respostaJson = JSON.parse(resposta)
+    if (respostaJson["dados"] != 0) {
+        respostaJsonNotEmpty = respostaJson
+    }
+
+    respostaJson = []
+    let respostaAllPartidosJson = JSON.parse(allPartidosApi)
+    let partidosEscolhidos = escolherPartidosPesquisaOuTodos(respostaJsonNotEmpty["dados"], respostaAllPartidosJson["dados"])
+
+    printCardsPartidos(partidosEscolhidos)
 }
