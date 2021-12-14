@@ -431,3 +431,69 @@
     flex-direction: row;
     justify-content: center;
 }
+
+.contatoP{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.contatoContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.camposContatos input[type=text]{
+    width: 500px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.camposContatos div{
+    margin: 20px ;
+}
+
+
+.camposContatos textarea[type=text]{
+    width: 500px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.camposContatos textarea[type=email]{
+    width: 500px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contatoConteudo {
+    margin: 20px;
+    width: 500px;
+}
+
+.faleConoscoBotao button {
+    background-color: #141941;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 16px 230px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.faleConoscoBotao button:hover {
+    background-color: #444b81;
+}
