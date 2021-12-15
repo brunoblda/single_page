@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <!--font-family: 'Lora', serif;-->
+    <!--
+    font-family: 'Lora', serif;-->
     <title>Dados Abertos</title>
 
 </head>
@@ -22,9 +23,9 @@
             <div class="logo">
                 <img src="/images/logo.png" alt="Logo da camara dos deputados">
             </div>
-            <div class="texto_logo" id="topoPagina">
+            <div class="texto_logo" id="topo">
                 <p>
-                    <a href="#topoPagina">dados aberto</a>
+                    <a href="#topo">dados aberto</a>
                 </p>
             </div>
 
@@ -32,7 +33,7 @@
         <nav class="navegacao">
             <div>
                 <p>
-                    <a href="#topoPagina">INICIO</a>
+                    <a href="#topo">INICIO</a>
                 </p>
             </div>
             <div>
@@ -57,12 +58,12 @@
             </div>
             <div>
                 <p>
-                    <a href="#topoPagina">CONTATO</a>
+                    <a href="#contato">CONTATO</a>
                 </p>
             </div>
             <div>
                 <p>
-                    <a href="#topoPagina">ASSESSMENT</a>
+                    <a href="#topo">ASSESSMENT</a>
                 </p>
             </div>
         </nav>
@@ -88,7 +89,7 @@
                 <div>
                     <p>DEPUTADOS</p>
                 </div>
-                <div>
+                <div class="subtituloDeputados">
                     <p>Consulte aqui os deputados da Legistlatura atual:</p>
                 </div>
                 <div>
@@ -105,7 +106,7 @@
                 <div>
                     <p>PARTIDOS</p>
                 </div>
-                <div>
+                <div class="subtituloPartidos">
                     <p>Consulte aqui os Partidos existentes:</p>
                 </div>
                 <div>
@@ -152,9 +153,9 @@
 
             <section class="pesquisaEventos" id="eventos">
                 <div class="eventosP">
-                    <p>EVENTOS</p>
+                    <h1>EVENTOS</h1>
                     <br>
-                    <p>Consulte aqui os eventos agendados:</p>
+                    <h2>Consulte aqui os eventos agendados:</h2>
                 </div>
                 <div class="camposDeBuscaEventos">
                     <div class="pesquisarDescricaoEventos">
@@ -172,7 +173,7 @@
                         <div class="dataHoraEventos">
                             <p>Data: 02/02/2021</p>
                             <br>
-                            <p>horas: 15:00</p>
+                            <p>Horas: 15:00</p>
                         </div>
                         <div class="verticalLine">
                         </div>
@@ -186,7 +187,7 @@
                         <div class="dataHoraEventos">
                             <p>Data: 12/02/2021</p>
                             <br>
-                            <p>horas: 10:00</p>
+                            <p>Horas: 10:00</p>
                         </div>
                         <div class="verticalLine">
                         </div>
@@ -206,26 +207,27 @@
 
             <section class="contato" id="contato">
                 <div class="contatoP">
-                    <p>CONTATO</p>
+                    <h1>CONTATO</h1>
                 </div>
                 <section class="contatoContainer">
                     <div class="flexCamposContatos">
 
                         <section class="camposContatos">
-                            <div>
-                                <input type="text" id="nomeContato" placeholder="Nome" required>
-                            </div>
-                            <div>
-                                <input type="email" id="emailContato" placeholder="Email" required>
-                            </div>
-                            <div>
-                                <textarea type="text" id="mensagemContato" rows="8" placeholder="Mensagem" required>
-                            </textarea>
-                            </div>
-                            <div class="faleConoscoBotao">
-                                <button onclick="">ENVIAR</button>
-                            </div>
-
+                            <form action="">
+                                <div>
+                                    <input type="text" id="nomeContato" placeholder="Nome" required>
+                                </div>
+                                <div>
+                                    <input type="email" id="emailContato" placeholder="Email" required>
+                                </div>
+                                <div>
+                                    <textarea type="text" id="mensagemContato" rows="8"
+                                        placeholder="Digite sua mensagem" required></textarea>
+                                </div>
+                                <div class="faleConoscoBotao">
+                                    <button onclick="">ENVIAR</button>
+                                </div>
+                            </form>
                         </section>
 
                     </div>
@@ -276,7 +278,15 @@
     </main>
 
     <footer>
-
+        <div class="copyrigthP">
+            <p>Copyright Bruno luiz de Deus Adão - Instituto Infnet - Assessment Interfaces Web -
+                https://github.com/brunoblda/single_page</p>
+        </div>
+        <div class="voltarAoTopo">
+            <p>>
+                <a href="#topo">Topo</a>
+            </p>
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>

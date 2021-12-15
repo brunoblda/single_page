@@ -17,6 +17,7 @@
 .texto_logo {
     text-align: center;
     padding-bottom: 5px;
+    font-family: 'Lora', serif;
 }
 
 .texto_logo a {
@@ -48,6 +49,7 @@
     padding-top: 33px;
     display: flex;
     justify-content: space-around;
+    font-family: 'Lora', serif;
 }
 
 .navegacao div {
@@ -66,12 +68,15 @@
 
 .ancoraDeputados {
     width: 100%;
+    font-family: 'Lora', serif;
 }
 
 .p1_ancoraDeputados {
 
     font-size: 45px;
     padding: 10px;
+    text-shadow: #000 2px 3px 2px;
+    font-family: 'Lora', serif;
 }
 
 .ancoraDeputados p {
@@ -157,6 +162,11 @@
 .pesquisaDeputados {
     text-align: center;
     padding-top: 60px;
+    font-family: 'Lora', serif;
+}
+
+.subtituloDeputados {
+    font-size: 20px;
 }
 
 .pesquisaDeputados div {
@@ -189,13 +199,19 @@
     cursor: pointer;
 }
 
-.pesquisaDeputados button:hover{
+.pesquisaDeputados button:hover {
     background-color: #444b81;
 }
 
 .pesquisaPartidos {
     text-align: center;
     padding-top: 60px;
+    font-family: 'Lora', serif;
+}
+
+.subtituloPartidos {
+
+    font-size: 20px;
 }
 
 .pesquisaPartidos div {
@@ -227,7 +243,7 @@
     cursor: pointer;
 }
 
-.pesquisaPartidos button:hover{
+.pesquisaPartidos button:hover {
 
     background-color: #444b81;
 }
@@ -256,9 +272,10 @@
     text-align: center;
 }
 
-.noticiasP{
+.noticiasP {
     text-align: center;
     padding-bottom: 35px;
+    font-family: 'Lora', serif;
 }
 
 .noticias {
@@ -268,12 +285,16 @@
 .noticiasConteudo {
     display: flex;
     flex-direction: row;
-    width: 1000px;
+    width: 800px;
 }
 
-.noticiasConteudo img{
-    width: 500px;
+.noticiasConteudo img {
+    width: 400px;
     padding-right: 50px;
+}
+
+.noticiasConteudo img:hover {
+    opacity: 0.7;
 }
 
 .flexNoticias {
@@ -282,7 +303,7 @@
     justify-content: center;
 }
 
-.noticiasText{
+.noticiasText {
     display: flex;
     flex-direction: column;
 }
@@ -291,10 +312,15 @@
     height: 300px;
 }
 
-.noticiasTextConteudo h1{
+.noticiasTextConteudo h1 {
     font-size: 22px;
     font-weight: bold;
-    
+    font-family: 'Lora', serif;
+
+}
+
+.noticiasTextConteudo p {
+    color: gray;
 }
 
 .noticiasText button {
@@ -302,7 +328,7 @@
     border: none;
     border-radius: 4px;
     color: white;
-    padding: 16px 200px;
+    padding: 16px 170px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -324,9 +350,15 @@
     margin-top: 180px;
     margin-bottom: 100px;
 }
-.eventosP{
+
+.eventosP {
     text-align: center;
     padding-bottom: 30px;
+    font-family: 'Lora', serif
+}
+
+.eventosP h2 {
+    font-size: 22px;
 }
 
 
@@ -337,12 +369,12 @@
     align-items: center;
 }
 
-.camposDeBuscaEventos div{
+.camposDeBuscaEventos div {
     padding: 20px;
 }
 
-.pesquisarDescricaoEventos input[type=text]{
-    width: 500px;
+.pesquisarDescricaoEventos input[type=text] {
+    width: 400px;
     padding: 12px 20px;
     display: inline-block;
     border: 1px solid #ccc;
@@ -350,8 +382,8 @@
     box-sizing: border-box;
 }
 
-.pesquisarDataEventos input[type=text]{
-    width: 300px;
+.pesquisarDataEventos input[type=text] {
+    width: 250px;
     padding: 12px 20px;
     display: inline-block;
     border: 1px solid #ccc;
@@ -359,13 +391,13 @@
     box-sizing: border-box;
 }
 
-.eventosBotao button{
+.eventosBotao button {
 
     background-color: #141941;
     border: none;
     border-radius: 4px;
     color: white;
-    padding: 15px 50px;
+    padding: 15px 35px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -382,27 +414,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    color: gray;
 }
 
-.cardEvento{
+.cardEvento {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     padding: 20px;
-    width: 500px; 
+    width: 420px;
 }
 
 .dataHoraEventos {
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: px;
 }
 
 .verticalLine {
-   border-left: 3px solid #141941 ;
+    border-left: 3px solid #141941;
 
 }
-.informacoesEventos{
+
+.informacoesEventos {
     padding-left: 10px;
 }
 
@@ -412,7 +445,7 @@
     border: none;
     border-radius: 4px;
     color: white;
-    padding: 16px 200px;
+    padding: 16px 180px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -432,9 +465,10 @@
     justify-content: center;
 }
 
-.contatoP{
+.contatoP {
     text-align: center;
     padding-bottom: 20px;
+    font-family: 'Lora', serif
 }
 
 .contatoContainer {
@@ -443,8 +477,17 @@
     justify-content: center;
 }
 
-.camposContatos input[type=text]{
-    width: 500px;
+.tituloFaleConosco{
+    font-size: 22px;
+    font-family: 'Lora', serif
+}
+
+.conteudoFaleConosco{
+    color: gray;
+}
+
+.camposContatos input[type=text] {
+    width: 400px;
     padding: 12px 20px;
     display: inline-block;
     border: 1px solid #ccc;
@@ -452,13 +495,8 @@
     box-sizing: border-box;
 }
 
-.camposContatos div{
-    margin: 20px ;
-}
-
-
-.camposContatos textarea[type=text]{
-    width: 500px;
+.camposContatos input[type=email] {
+    width: 400px;
     padding: 12px 20px;
     display: inline-block;
     border: 1px solid #ccc;
@@ -466,18 +504,24 @@
     box-sizing: border-box;
 }
 
-.camposContatos textarea[type=email]{
-    width: 500px;
+.camposContatos div {
+    margin: 20px;
+}
+
+
+.camposContatos textarea {
+    width: 400px;
     padding: 12px 20px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
+
 
 .contatoConteudo {
     margin: 20px;
-    width: 500px;
+    width: 400px;
 }
 
 .faleConoscoBotao button {
@@ -485,7 +529,7 @@
     border: none;
     border-radius: 4px;
     color: white;
-    padding: 16px 230px;
+    padding: 16px 180px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -496,4 +540,44 @@
 
 .faleConoscoBotao button:hover {
     background-color: #444b81;
+}
+
+footer {
+
+    background-color: #141941;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    .noticiasConteudo,
+    .camposDeBuscaEventos,
+    .contatoContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+.copyrigthP {
+    width: 85%;
+}
+
+.voltarAoTopo {
+    width: 10%;
+}
+
+
+.voltarAoTopo a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.voltarAoTopo a:hover {
+    text-decoration: underline;
 }
